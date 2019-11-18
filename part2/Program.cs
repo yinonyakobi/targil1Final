@@ -82,7 +82,7 @@ namespace part2
         static bool isAvailable(bool[,] calender, int i, int j, int len)
         {
             if (i < 0 || j < 0 || len < 1 || i >= NumOfMonthsInAYear || j >= NumOfDaysInAMonth) return false;
-            if ((i * NumOfDaysInAMonth + j + len) > NumOfDaysInAMonth * NumOfMonthsInAYear) return false; // if staying time exceeds the limit of days in the year.
+            if ((i * NumOfDaysInAMonth + j + len) >= NumOfDaysInAMonth * NumOfMonthsInAYear) return false; // if staying time exceeds the limit of days in the year.
             return len <= continuityLength(calender, i, j, false);
         }
 
